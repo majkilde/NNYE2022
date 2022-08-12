@@ -1,8 +1,13 @@
 function RunGame() {
   var result = GetRandom();
   var cnt = 0;
-  var guess = Number(window.prompt("Indtast dit gæt #"+cnt++));
-  console.log( cnt, "Der blev gættet på " + guess);
+  var guess = Ask("Indtast dit gæt #" + ++cnt);
+  while (guess != result) {
+    console.log(cnt, "Der blev gættet på " + guess);
+    guess = Ask("Indtast dit gæt #" + ++cnt);
+  }
+
+  alert("Tillykke - du klarede det i " + cnt + " gæt");
 }
 
 function GetRandom(max = 100) {
@@ -11,4 +16,8 @@ function GetRandom(max = 100) {
   var i = Math.floor(f * max) + 1;
   console.log(f, i);
   return i;
+}
+
+function Ask(msg) {
+  return Number(window.prompt(msg));
 }
