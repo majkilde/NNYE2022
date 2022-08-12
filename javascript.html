@@ -21,7 +21,7 @@
         padding-left: 3em;
       }
       hr {
-        margin:2em 0 2em 0;
+        margin: 2em 0 2em 0;
       }
     </style>
   </head>
@@ -107,15 +107,28 @@
           ?
         </button>
 
-        <hr/>
-        <button type="button" class="ui button primary small" onclick="Greeting()">
-            Tak
-          </button>
-
+        <hr />
+        <button
+          type="button"
+          class="ui button primary small"
+          onclick="Greeting()"
+        >
+          Tak
+        </button>
       </div>
 
       <!-- example 2 -->
-      <div class="ui tab" data-tab="example2"></div>
+      <div class="ui tab" data-tab="example2">
+        I dette spil skal du gætte et tal mellem 1 og 100 i færrest mulige
+        forsøg.<br />
+        <button
+          type="button"
+          class="ui button primary small"
+          onclick="RunGame()"
+        >
+          Start spil
+        </button>
+      </div>
 
       <!-- example 3 -->
       <div class="ui tab" data-tab="example3"></div>
@@ -124,6 +137,7 @@
     </div>
 
     <script src="js/hello.js"></script>
+    <script src="js/guess.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
