@@ -3,8 +3,9 @@ function RunGame() {
   var cnt = 0;
   var guess = Ask("Indtast dit gæt #" + ++cnt);
   while (guess != result) {
+    var hint = guess > result ? "For højt" : "For lavt";
     console.log(cnt, "Der blev gættet på " + guess);
-    guess = Ask("Indtast dit gæt #" + ++cnt);
+    guess = Ask(hint + ": Indtast dit gæt #" + ++cnt);
   }
 
   alert("Tillykke - du klarede det i " + cnt + " gæt");
