@@ -1,0 +1,38 @@
+h1 {
+  border-top: 1px solid gray;
+  border-bottom: 2px solid gray;
+  text-align: center;
+  width: 100%;
+}
+h1 img {
+  width: 32px;
+  height: 32px;
+  padding-right: 10px;
+}
+h3 {
+  color: darkblue;
+  text-shadow: 2px 2px lightgray;
+  text-transform: uppercase;
+  border-bottom: solid 1px darkblue;
+  padding-top: 20px;
+}
+section img {
+  width: 400px;
+  height: 200px;
+  float: right;
+}
+section {
+  clear: both;
+}
+a,
+a:visited {
+  color: darkblue;
+}
+
+a:hover {
+  background-color: darkblue;
+  color: white;
+}
+.topics {
+  list-style: square;
+}
