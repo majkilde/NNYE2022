@@ -4,85 +4,141 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tech Cafe @ NNYE</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+
+    <style>
+      h1 {
+        border-top: 1px solid gray;
+        border-bottom: 2px solid gray;
+        text-align: center;
+        width: 100%;
+      }
+      h1 img {
+        width: 32px;
+        height: 32px;
+        padding-right: 10px;
+      }
+      h3 {
+        color: darkblue;
+        text-shadow: 2px 2px lightgray;
+        text-transform: uppercase;
+        border-bottom: solid 1px darkblue;
+        padding-top: 20px;
+      }
+      section img {
+        width: 400px;
+        height: 200px;
+        float: right;
+      }
+      section {
+        clear: both;
+      }
+      a,
+      a:visited {
+        color: darkblue;
+      }
+
+      a:hover {
+        background-color: darkblue;
+        color: white;
+      }
+      .topics {
+        list-style: square;
+      }
+    </style>
   </head>
   <body>
-    <h1><img src="images/logo.png" style="width:32px; height: 32px;"/>&nbsp;TechCafe</h1>
+    <h1><img src="images/logo.png" />TechCafe</h1>
     Velkommen til TechCafe på NNY efterskole.<br />
-    <br />
 
-    <h3 style="color:#0000ff">Program</h3>
+    <h3>Program</h3>
     <ol>
       <li><a href="#webdev">Web udvikling</a></li>
       <li><a href="#js">JavaScript programmering</a></li>
       <li><a href="#robocode">Robot programmering (Java)</a></li>
     </ol>
-    <hr />
 
-    <h3 style="color:#0000ff" id="webdev">Web udvikling</h3>
-    Vi laver en simpel webside og leger lidt med
-
-    <li><a href="https://www.w3schools.com/html/" target="_blank">Html</a></li>
-    <li>
-      <a href="https://www.w3schools.com/css/" target="_blank">CSS</a>. Både
-      inline, internal og external (<a
-        href="https://getbootstrap.com/"
-        target="_blank"
-        >bootstrap</a
-      >)
-    </li>
-    <li>
-      <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a>
-      introduktion
-      <ul>
+    <section>
+      <h3 id="webdev">Web udvikling</h3>
+      <img src="images/html.jpg" />
+      Vi laver en simpel webside og leger lidt med
+      <ul class="topics">
         <li>
-          JavaScript til UI, f.eks. mouseover effekter på knapper og billeder,
-          hide/when funktioner, m.v.
+          <a href="https://www.w3schools.com/html/" target="_blank">Html</a>
         </li>
-        <li>Event styring</li>
+        <li>
+          <a href="https://www.w3schools.com/css/" target="_blank">CSS</a>. Både
+          inline, internal og external (<a
+            href="https://getbootstrap.com/"
+            target="_blank"
+            >bootstrap</a
+          >)
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a>
+          introduktion
+          <ul>
+            <li>
+              JavaScript til UI, f.eks. mouseover effekter på knapper og
+              billeder, hide/when funktioner, m.v.
+            </li>
+            <li>Event styring</li>
+          </ul>
+        </li>
       </ul>
-    </li>
+    </section>
 
-    <img src="images/html.jpg" />
+    <section>
+      <h3 id="js">JavaScript programmering</h3>
+      <img src="images/js.jpg" />
+      Rigtig programmering med JavaScript.
+      <ul class="topics">
+        <li>
+          Installation og opsætning af
+          <a href="https://code.visualstudio.com/" target="_blank"
+            >Visual Studio Code</a
+          >
+        </li>
+        <li>Introduktion til programmering</li>
+        <li>
+          '<i>Hello World'</i>: Om programmering og syntaks. Input/output.
+        </li>
+        <li>'<i>Gæt et tal'</i>: Lær om loops og conditions</li>
+        <li>
+          '<i>Empirisk sandsynlighedsregning'</i>: Her lærer vi om funktioner og
+          libraries og leger med matematik.
+        </li>
+        <ul>
+          <li>Hvad er sandsynligheden for at slå en sekser med én terning?</li>
+          <li>Og to seksere med seks terninger?</li>
+          <li>
+            Vis summen af to terninger på en graf (normal fordelingskurve)
+          </li>
+        </ul>
+      </ul>
+    </section>
 
-    <h3 style="color:#0000ff" id="js">JavaScript programmering</h3>
-    Rigtig programmering med JavaScript.
-    <li>
-      Installation og opsætning af
-      <a href="https://code.visualstudio.com/" target="_blank"
-        >Visual Studio Code</a
-      >
-    </li>
-    <li>Introduktion til programmering</li>
-    <li>'<i>Hello World'</i>: Om programmering og syntaks. Input/output.</li>
-    <li>'<i>Gæt et tal'</i>: Lær om loops og conditions</li>
-    <li>
-      '<i>Empirisk sandsynlighedsregning'</i>: Her lærer vi om funktioner og
-      libraries og leger med matematik.
-    </li>
-    <ul>
-      <li>Hvad er sandsynligheden for at slå en sekser med én terning?</li>
-      <li>Og to seksere med seks terninger?</li>
-      <li>Vis summen af to terninger på en graf (normal fordelingskurve)</li>
-    </ul>
-
-    <img src="images/js.jpg" />
-
-    <h3 style="color:#0000ff" id="robocode">Robot programmet</h3>
-
-    <a href="https://robocode.sourceforge.io/" target="_blank">RoboCode</a>:
-    Build the best - destroy the rest!
-    <ol>
-      <li>
-        Installation og opsætning af RoboCode. Tjek at alle har et kørende
-        program
-      </li>
-      <li>Introduktion til Java og Bots</li>
-      <li>Programmering af egen bot og lad den kæmpe mod de andre, som i denne <a href="https://www.youtube.com/watch?v=8JJqc5-erVM&t=33s" target="_blank">
-        video
-      </a></li>
-    </ol>
-
-    <img src="images/robocode.png" />
+    <section>
+      <h3 id="robocode">Robot programmet</h3>
+      <img src="images/robocode.png" />
+      <a href="https://robocode.sourceforge.io/" target="_blank">RoboCode</a>:
+      Build the best - destroy the rest!
+      <ul class="topics">
+        <li>
+          Installation og opsætning af RoboCode. Tjek at alle har et kørende
+          program
+        </li>
+        <li>Introduktion til Java og Bots</li>
+        <li>
+          Programmering af egen bot og lad den kæmpe mod de andre, som i denne
+          <a
+            href="https://www.youtube.com/watch?v=8JJqc5-erVM&t=33s"
+            target="_blank"
+          >
+            video
+          </a>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
