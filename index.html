@@ -2,103 +2,178 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
     <title>Tech Cafe @ NNYE</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png" />
-    <link href="styles/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+
+    <style type="text/css">
+      .main.container {
+        margin-top: 4em;
+        padding-left: 3em;
+      }
+    </style>
   </head>
+
   <body>
-    <h1><img src="images/logo.png" />TechCafe</h1>
-    Velkommen til TechCafe på NNY efterskole.<br />
+    <!-- Top Menu -->
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <i class="cogs icon"></i>
+          NNYE TechCafe
+        </a>
+        <a class="item active" href="index.html">Web udvikling</a>
+        <a class="item" href="javascript.html">JavaScript</a>
+        <a class="item" href="robocode.html">RoboCode</a>
+      </div>
+    </div>
 
-    <h3>Program</h3>
-    <ol>
-      <li><a href="#webdev">Web udvikling</a></li>
-      <li><a href="#js">JavaScript programmering</a></li>
-      <li><a href="#robocode">Robot programmering (Java)</a></li>
-    </ol>
+    <div class="ui main text container">
+      <!-- Welcome with tabs -->
+      <div>
+        <h1 class="ui header"><i class="cogs icon"></i>TechCafe</h1>
+        Velkommen til TechCafe på NNY efterskole. Kurset består af tre dele:
 
-    <section>
-      <h3 id="webdev">Web udvikling</h3>
-      <img src="images/html.jpg" />
-      Vi laver en simpel webside og leger lidt med
-      <ul class="topics">
-        <li>
-          <a href="https://www.w3schools.com/html/" target="_blank">Html</a>
-        </li>
-        <li>
-          <a href="https://www.w3schools.com/css/" target="_blank">CSS</a>. Både
-          inline, internal og external (<a
-            href="https://getbootstrap.com/"
-            target="_blank"
-            >bootstrap</a
-          >)
-        </li>
-        <li>
-          <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a>
-          introduktion
-          <ul>
-            <li>
-              JavaScript til UI, f.eks. mouseover effekter på knapper og
-              billeder, hide/when funktioner, m.v.
-            </li>
-            <li>Event styring</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+        <div class="ui three item menu">
+          <a data-tab="webdev" class="item active">Web udvikling</a>
+          <a data-tab="js" class="item">JavaScript programmering</a>
+          <a data-tab="robocode" class="item">Robot kamp</a>
+        </div>
+      </div>
+      
+      <br/>
 
-    <section>
-      <h3 id="js">JavaScript programmering</h3>
-      <img src="images/js.jpg" />
-      Rigtig programmering med JavaScript.
-      <ul class="topics">
-        <li>
-          Installation og opsætning af
-          <a href="https://code.visualstudio.com/" target="_blank"
-            >Visual Studio Code</a
-          >
-        </li>
-        <li>Introduktion til programmering</li>
-        <li>
-          '<i>Hello World'</i>: Om programmering og syntaks. Input/output.
-        </li>
-        <li>'<i>Gæt et tal'</i>: Lær om loops og conditions</li>
-        <li>
-          '<i>Empirisk sandsynlighedsregning'</i>: Her lærer vi om funktioner og
-          libraries og leger med matematik.
-        </li>
-        <ul>
-          <li>Hvad er sandsynligheden for at slå en sekser med én terning?</li>
-          <li>Og to seksere med seks terninger?</li>
-          <li>
-            Vis summen af to terninger på en graf (normal fordelingskurve)
-          </li>
-        </ul>
-      </ul>
-    </section>
+      <!-- Web dev -->
+      <div class="ui tab active" data-tab="webdev">
+        <div class="ui grid">
+          <div class="eight wide column">
+            <h3 class="ui header" id="webdev">Web udvikling</h3>
 
-    <section>
-      <h3 id="robocode">Robot programmet</h3>
-      <img src="images/robocode.png" />
-      <a href="https://robocode.sourceforge.io/" target="_blank">RoboCode</a>:
-      Build the best - destroy the rest!
-      <ul class="topics">
-        <li>
-          Installation og opsætning af RoboCode. Tjek at alle har et kørende
-          program
-        </li>
-        <li>Introduktion til Java og Bots</li>
-        <li>
-          Programmering af egen bot og lad den kæmpe mod de andre, som i denne
-          <a
-            href="https://www.youtube.com/watch?v=8JJqc5-erVM&t=33s"
-            target="_blank"
-          >
-            video
-          </a>
-        </li>
-      </ul>
-    </section>
+            Vi laver en simpel webside og leger lidt med
+            <ul class="ui list">
+              <li>
+                <a href="https://www.w3schools.com/html/" target="_blank"
+                  >Html</a
+                >
+              </li>
+              <li>
+                <a href="https://www.w3schools.com/css/" target="_blank">CSS</a
+                >. Både inline, internal og external (<a
+                  href="https://getbootstrap.com/"
+                  target="_blank"
+                  >bootstrap</a
+                >)
+              </li>
+              <li>
+                <a href="https://www.w3schools.com/js/" target="_blank"
+                  >JavaScript</a
+                >
+                introduktion
+                <ul>
+                  <li>
+                    JavaScript til UI, f.eks. mouseover effekter på knapper og
+                    billeder, hide/when funktioner, m.v.
+                  </li>
+                  <li>Event styring</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="eight wide column">
+            <img class="ui fluid image" src="images/html.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="ui tab" data-tab="js">
+        <div class="ui grid">
+          <div class="eight wide column">
+            <h3 class="ui header" id="js">JavaScript programmering</h3>
+            Rigtig programmering med JavaScript.
+            <ul class="ui list">
+              <li>
+                Installation og opsætning af
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Visual Studio Code</a
+                >
+              </li>
+              <li>Introduktion til programmering</li>
+              <li>
+                '<i>Hello World'</i>: Om programmering og syntaks. Input/output.
+              </li>
+              <li>'<i>Gæt et tal'</i>: Lær om loops og conditions</li>
+              <li>
+                '<i>Empirisk sandsynlighedsregning'</i>: Her lærer vi om
+                funktioner og libraries og leger med matematik.
+              </li>
+              <ul>
+                <li>
+                  Hvad er sandsynligheden for at slå en sekser med én terning?
+                </li>
+                <li>Og to seksere med seks terninger?</li>
+                <li>
+                  Vis summen af to terninger på en graf (normal fordelingskurve)
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="eight wide column">
+            <img class="ui fluid image" src="images/js.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <!-- RoboCode -->
+      <div class="ui tab" data-tab="robocode">
+        <div class="ui grid">
+          <div class="eight wide column">
+            <h3 class="ui header" id="robocode">Robot programmet</h3>
+            <a href="https://robocode.sourceforge.io/" target="_blank"
+              >RoboCode</a
+            >: Build the best - destroy the rest!
+            <ul class="ui list">
+              <li>
+                Installation og opsætning af RoboCode. Tjek at alle har et
+                kørende program
+              </li>
+              <li>Introduktion til Java og Bots</li>
+              <li>
+                Programmering af egen bot og lad den kæmpe mod de andre, som i
+                denne
+                <a
+                  href="https://www.youtube.com/watch?v=8JJqc5-erVM&t=33s"
+                  target="_blank"
+                >
+                  video
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="eight wide column">
+            <img class="ui fluid image" src="images/robocode.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+      $(".menu .item").tab();
+    </script>
   </body>
 </html>
