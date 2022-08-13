@@ -167,12 +167,21 @@
       </div>
 
       <!-- example 4 -->
-      <div class="ui tab" data-tab="example4"></div>
+      <div class="ui tab" data-tab="example4">
+        Histrogram over sandsynligheder - summen af to terninger.
+        <button type="button" class="ui button primary small" onclick="Draw(100000)">
+          Beregn
+        </button>
+
+        <!--Div that will hold the chart-->
+        <div id="chart_div"></div>
+      </div>
     </div>
 
     <script src="js/hello.js"></script>
     <script src="js/guess.js"></script>
     <script src="js/dice.js"></script>
+    <script src="js/graph.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -182,5 +191,6 @@
     <script>
       $(".menu .item").tab();
     </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </body>
 </html>
