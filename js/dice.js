@@ -1,4 +1,4 @@
-function RunDiceGame1(numberOfRolls = 100000) {
+function RunDiceGame1(numberOfRolls) {
   var numberOfSixes = RollSix(numberOfRolls);
   var probability = (numberOfSixes / numberOfRolls) * 100;
   var msg =
@@ -12,11 +12,7 @@ function RunDiceGame1(numberOfRolls = 100000) {
   alert(msg);
 }
 
-function RunDiceGame2(
-  numberOfRolls = 1000000,
-  numberOfDices = 6,
-  numberOfSixes = 2
-) {
+function RunDiceGame2(numberOfRolls, numberOfDices, numberOfSixes) {
   var result = 0; //antal kast der indeholder mindst x antal seksere
   for (var i = 1; i <= numberOfRolls; i++) {
     // Roll n number of dices and count the sixes
@@ -39,7 +35,7 @@ function RunDiceGame2(
   alert(msg);
 }
 
-function RunDiceGame3(numberOfRolls = 100) {
+function RunDiceGame3(numberOfRolls) {
   var longestStreak = RollSixInaRow(numberOfRolls);
   var msg =
     "Fik maksimalt " +
